@@ -18,4 +18,17 @@ import java.util.Scanner;
 public class Conjuntos {
     Scanner entrada;
     Set desJava, desCelulares, desWeb;
+    
+    public void ingresarPersona(){
+    }
+    
+    public void interseccion(){
+    }
+    
+    public void subconjunto(){
+    }
+    
+    public void masGrande(){
+    }
+    
 }
