@@ -6,8 +6,16 @@
 
 /**
  *
- * @author Daniel
+ * @author Daniel Gerendas 13158
+ * @author Edgar Chamo 13158
  */
+import java.util.Set;
+import java.util.HashSet;
+import java.util.TreeSet;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
 public class Conjuntos {
-    
+    Scanner entrada;
+    Set desJava, desCelulares, desWeb;
 }
