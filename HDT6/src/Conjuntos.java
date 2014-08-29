@@ -19,7 +19,19 @@ public class Conjuntos {
     Scanner entrada;
     Set desJava, desCelulares, desWeb;
     
+    public Conjuntos(){
+        entrada=new Scanner(System.in);
+        System.out.println("Ingrese 0: Hashset \n1: Treeset \n2: Linkedhashset \n");
+        int param=entrada.nextInt();
+        entrada.nextLine();
+        SetFactory factory=new SetFactory();
+        desJava=factory.getInstance(param);
+        desWeb=factory.getInstance(param);
+        desCelulares=factory.getInstance(param);
+    }
+    
     public void ingresarPersona(){
+        
     }
     
     public void interseccion(){
