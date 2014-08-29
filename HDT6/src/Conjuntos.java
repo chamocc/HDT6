@@ -6,8 +6,8 @@
 
 /**
  *
- * @author Daniel Gerendas 13158
- * @author Edgar Chamo 13158
+ * @Edgar Chamo 13083
+ * @Daniel Gerendas 13158
  */
 import java.util.Set;
 import java.util.HashSet;
