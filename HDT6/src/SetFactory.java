@@ -9,6 +9,6 @@
  * @Edgar Chamo 13083
  * @Daniel Gerendas 13158
  */
-public class Conjuntos {
+public class SetFactory {
     
 }
