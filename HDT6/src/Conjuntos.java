@@ -21,7 +21,7 @@ public class Conjuntos {
     
     public Conjuntos(){
         entrada=new Scanner(System.in);
-        System.out.println("Ingrese 0: Hashset \n1: Treeset \n2: Linkedhashset \n");
+        System.out.println("Ingrese\n 0: Hashset \n1: Treeset \n2: Linkedhashset \n");
         int param=entrada.nextInt();
         entrada.nextLine();
         SetFactory<String> factory=new SetFactory<String>();
@@ -34,13 +34,13 @@ public class Conjuntos {
     
     public void ingresarPersona(String nombre, int especialidad){
 	switch( especialidad){
-		case 0:
+		case 1:
 			desJava.add(nombre);
                         break;
-		case 1:
+		case 2:
 			desWeb.add(nombre);
                     break;
-		case 2:
+		case 3:
 			desCelulares.add(nombre);
                     break;
 }
@@ -51,7 +51,7 @@ public class Conjuntos {
 	String[] arreglo=new String[conjunto.size()];
         arreglo=(String[])conjunto.toArray(new String[0]);
 	for(int i=0;i<conjunto.size();i++){
-		System.out.println(arreglo[i] + "\n");
+            System.out.println(arreglo[i]);
 	}
 
 }
