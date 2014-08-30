@@ -46,8 +46,8 @@ public class Conjuntos {
     public void imprimir(Set conjunto){
 	String[] arreglo;
            arreglo=(String[])conjunto.toArray();
-	for(i=0;i<conjunto.size();i++){
-		System.out.println(arreglo[i] +”\n”);
+	for(int i=0;i<conjunto.size();i++){
+		System.out.println(arreglo[i] + "\n");
 	}
 
 }
@@ -86,39 +86,39 @@ public class Conjuntos {
 	vacio = desUniversal.isEmpty();
 
 	if(vacio == true){
-		System.out.println(“El conjunto de desarrolladores Java SI es subconjunto de desarrolladores Web”);
-}
-else{
-	System.out.println(“El conjunto de  desarrolladores Java No es subconjunto de desarrolladores Web”);
-}
+		System.out.println("El conjunto de desarrolladores Java SI es subconjunto de desarrolladores Web");
+        }
+        else{
+                System.out.println("El conjunto de  desarrolladores Java No es subconjunto de desarrolladores Web");
+        }
 	
     }
     
     public void masGrande(){
 	int tamanio1;
 	int tamanio2;
-int tamanio3;
+        int tamanio3;
  
-	tamanio1 = desjava.size();
+	tamanio1 = desJava.size();
 	tamanio2 = desWeb.size();
-	tamanio3 = desCelulares();
+	tamanio3 = desCelulares.size();
 
 	if (tamanio1 > tamanio2){
 		if (tamanio1 > tamanio3)
 		{
-			System out.print(“El conjunto mas grande es: Java”);
+			System.out.println("El conjunto mas grande es: Java");
 			imprimir(desJava);
-}
-else{
-System.out.println(“El conjunto mas grande es: Celulares”);
-imprimir(desCelulares);
-}
-	else if(tamanio2 > tamanio3){
-	System.out.println(“El conjunto mas grande es: Web”);
+                }
+            else{
+            System.out.println("El conjunto mas grande es: Celulares");
+            imprimir(desCelulares);
+            }
+        else if(tamanio2 > tamanio3){
+	System.out.println("El conjunto mas grande es: Web");
 	imprimir(desWeb);
-}
+        }
 	else {
-		System.out.println(“El conjunto mas grande es: Celulares”)
+		System.out.println("El conjunto mas grande es: Celulares");
 		imprimir(desCelulares);
 }
 }
