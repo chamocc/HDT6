@@ -36,17 +36,20 @@ public class Conjuntos {
 	switch( especialidad){
 		case 0:
 			desJava.add(nombre);
+                        break;
 		case 1:
 			desWeb.add(nombre);
+                    break;
 		case 2:
 			desCelulares.add(nombre);
+                    break;
 }
         
     }
 
     public void imprimir(Set conjunto){
-	String[] arreglo;
-           arreglo=(String[])conjunto.toArray();
+	String[] arreglo=new String[conjunto.size()];
+        arreglo=(String[])conjunto.toArray(new String[0]);
 	for(int i=0;i<conjunto.size();i++){
 		System.out.println(arreglo[i] + "\n");
 	}
@@ -58,22 +61,22 @@ public class Conjuntos {
                 interseccion=desJava;
 		interseccion.retainAll(desWeb);
 		interseccion.retainAll(desCelulares);
-		System.out.println("Las personas que trabajan en las tres áreas son: \n2");
+		System.out.println("Las personas que trabajan en las tres áreas son: \n");
 		imprimir(interseccion);
 	}else if(java && web){
 		interseccion=desJava;
                 interseccion.retainAll(desWeb);
-		System.out.println("Las personas que trabajan en Java y Web son: \n2");
+		System.out.println("Las personas que trabajan en Java y Web son: \n");
 		imprimir(interseccion);
 	}else if(java && cel){
 		interseccion=desJava;
                 interseccion.retainAll(desCelulares);
-		System.out.println("Las personas que trabajan en Java y Celulares son: \n2");
+		System.out.println("Las personas que trabajan en Java y Celulares son: \n");
 		imprimir(interseccion);
 	}else if(web && cel){
 		interseccion=desWeb;
                 interseccion.retainAll(desCelulares);
-		System.out.println("Las personas que trabajan en Celulares y Web son: \n2");
+		System.out.println("Las personas que trabajan en Celulares y Web son: \n");
 		imprimir(interseccion);
 	}
 	
