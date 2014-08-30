@@ -27,7 +27,7 @@ public class Main {
                 String nombre=entrada.next();
                 System.out.println("Ingrese si pertenece a 1:Java\n2:Web\n3:Celulares");
                 int conjunto=entrada.nextInt();
-                conjuntos.ingresarPersona(null, conjunto);
+                conjuntos.ingresarPersona(nombre, conjunto);
             }else if(param==2){
                 System.out.println("Ingrese 1:Int. Java-Web\n 2:Java-Cel\n 3:Cel-Web\n 4:los tres");
                 int cual=entrada.nextInt();
