@@ -105,22 +105,20 @@ public class Conjuntos {
 	tamanio2 = desWeb.size();
 	tamanio3 = desCelulares.size();
 
-	if (tamanio1 > tamanio2){
-		if (tamanio1 > tamanio3)
-		{
-                System.out.println("El conjunto mas grande es: Java");
-                imprimir(desJava);
-                }else{
-                System.out.println("El conjunto mas grande es: Celulares");
-                imprimir(desCelulares);
-            }else if(tamanio2 > tamanio3){
-                System.out.println("El conjunto mas grande es: Web");
+	if (tamanio1 > tamanio2 && tamanio1 > tamanio3){
+            System.out.println("El Conjunto mas grande es desarrolladores Java");
+            imprimir(desJava);
+        }
+        else{
+            if(tamanio2 > tamanio1 && tamanio2 > tamanio3){
+                System.out.println("El Conjunto mas grande es desarrolladores Web");
                 imprimir(desWeb);
-                }
-                else {
-                        System.out.println("El conjunto mas grande es: Celulares");
-                        imprimir(desCelulares);
-                }
+            }
+            else{
+                System.out.println("El Conjunto mas grande es desarrolladores Celulares"); 
+                imprimir(desCelulares);
+            }
+            
         }
     }
     
