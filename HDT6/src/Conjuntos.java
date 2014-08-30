@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 public class Conjuntos {
     Scanner entrada;
-    Set desJava, desCelulares, desWeb, desUniversal;
+    Set desJava, desCelulares, desWeb, desUniversal, interseccion;
     
     public Conjuntos(){
         entrada=new Scanner(System.in);
@@ -25,10 +25,11 @@ public class Conjuntos {
         int param=entrada.nextInt();
         entrada.nextLine();
         SetFactory<String> factory=new SetFactory<String>();
-        desJava<String>=factory.getInstance(param);
-        desWeb<String>=factory.getInstance(param);
-        desCelulares<String>=factory.getInstance(param);
-        desUniversal<String>=factory.getInstance(param);
+        desJava=factory.getInstance(param);
+        desWeb=factory.getInstance(param);
+        desCelulares=factory.getInstance(param);
+        desUniversal=factory.getInstance(param);
+        interseccion=factory.getInstance(param);
     }
     
     public void ingresarPersona(String nombre, int especialidad){
@@ -53,26 +54,27 @@ public class Conjuntos {
 }
     
     public void interseccion(boolean java, boolean web, boolean cel){
-	HashSet<String> interseccion1=new HashSet<String>();
-	HashSet<String> interseccion2=new HashSet<String>();
-	
 	if(java && web && cel){
-		interseccion1=desJava.retainAll(desWeb);
-		interseccion2=interseccion1.retainAll(desCelulares);
-		System.out.println(“Las personas que trabajan en las tres áreas son: \n2”);
-		imprimir(interseccion2);
+                interseccion=desJava;
+		interseccion.retainAll(desWeb);
+		interseccion.retainAll(desCelulares);
+		System.out.println("Las personas que trabajan en las tres áreas son: \n2");
+		imprimir(interseccion);
 	}else if(java && web){
-		interseccion1=desJava.retainAll(desWeb);
-		System.out.println(“Las personas que trabajan en Java y Web son: \n2”);
-		imprimir(interseccion1);
+		interseccion=desJava;
+                interseccion.retainAll(desWeb);
+		System.out.println("Las personas que trabajan en Java y Web son: \n2");
+		imprimir(interseccion);
 	}else if(java && cel){
-		interseccion1=desJava.retainAll(desCelulares);
-		System.out.println(“Las personas que trabajan en Java y Celulares son: \n2”);
-		imprimir(interseccion1);
+		interseccion=desJava;
+                interseccion.retainAll(desCelulares);
+		System.out.println("Las personas que trabajan en Java y Celulares son: \n2");
+		imprimir(interseccion);
 	}else if(web && cel){
-		interseccion1=desWeb.retainAll(desCelulares);
-		System.out.println(“Las personas que trabajan en Weby Celulares son: \n2”);
-		imprimir(interseccion1);
+		interseccion=desWeb;
+                interseccion.retainAll(desCelulares);
+		System.out.println("Las personas que trabajan en Celulares y Web son: \n2");
+		imprimir(interseccion);
 	}
 	
 	
@@ -106,22 +108,20 @@ public class Conjuntos {
 	if (tamanio1 > tamanio2){
 		if (tamanio1 > tamanio3)
 		{
-			System.out.println("El conjunto mas grande es: Java");
-			imprimir(desJava);
+                System.out.println("El conjunto mas grande es: Java");
+                imprimir(desJava);
+                }else{
+                System.out.println("El conjunto mas grande es: Celulares");
+                imprimir(desCelulares);
+            }else if(tamanio2 > tamanio3){
+                System.out.println("El conjunto mas grande es: Web");
+                imprimir(desWeb);
                 }
-            else{
-            System.out.println("El conjunto mas grande es: Celulares");
-            imprimir(desCelulares);
-            }
-        else if(tamanio2 > tamanio3){
-	System.out.println("El conjunto mas grande es: Web");
-	imprimir(desWeb);
+                else {
+                        System.out.println("El conjunto mas grande es: Celulares");
+                        imprimir(desCelulares);
+                }
         }
-	else {
-		System.out.println("El conjunto mas grande es: Celulares");
-		imprimir(desCelulares);
-}
-}
     }
     
 }
